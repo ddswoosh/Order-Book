@@ -45,5 +45,12 @@ void Base::setPnl() {
     // Get data from python api
     // pnlDollar = api data * qty filled - fillprice * qty files
     // pnlPercent = 100 - fillprice / apidata
+}
+
+void Base::setSymbolPrice() {
+    // Get data from python api
+}
+
+bool Base::deleteOrder(int id) {
 
 }

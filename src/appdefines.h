@@ -6,8 +6,6 @@
 
 // Database connection settings
 #define DB1     "database/orders.db"
-#define UNIQUEID 1
-
 
 // Order parameters
 enum Direction {
@@ -28,28 +26,6 @@ enum Status {
     CLOSEDPARTIAL, // Refers to filled amount
     CLOSEDNONE,    // Refers to filled amount
     FAILED,
-};
-
-class Database {
-    private:
-        // sqlite3* db;
-
-    public:
-        static Database& getInstance() {
-            static Database instance;
-
-            // if (instance.db == nullptr) {
-                // sqlite3_open(DB1, &instance.db);
-            // }
-            return instance;
-        }
-
-        void closeConnection() {
-            // if (db != nullptr) {
-                // sqlite3_close(db);
-                // db = nullptr;
-            // }
-        }
 };
 
 #endif 

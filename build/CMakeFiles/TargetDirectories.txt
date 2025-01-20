@@ -1,3 +1,0 @@
-C:/Users/ddswoosh/Order-Book/build/CMakeFiles/ORDER_BOOK_0.0.1.dir
-C:/Users/ddswoosh/Order-Book/build/CMakeFiles/edit_cache.dir
-C:/Users/ddswoosh/Order-Book/build/CMakeFiles/rebuild_cache.dir

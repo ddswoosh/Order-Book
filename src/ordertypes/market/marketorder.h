@@ -14,13 +14,13 @@ class Market : public Base {
      
         
     public:
-        Market(Direction dir, int qty) : Base(MARKET, dir, INIT, qty) {}
-
+        Market(Direction dir, int qty, std::string symbol) 
+        : Base(MARKET, dir, qty, symbol) {}
+        ~Market() override {}
+        
         bool addOrder(Direction dir, int qty) override;
         bool modifyOrder(Direction dir, int id, int qty) override;
 
-        std::string getSymbol() { return symbol; }
-        double getSymbolPrice() { return symbolPrice; }
 
 };
 

@@ -23,7 +23,6 @@ class Base {
         void setFillPrice();   
         void setPnl();          
         void setSymbolPrice();  
-        void setSymbol();
 
     protected:
         Type type;
@@ -42,9 +41,9 @@ class Base {
     public:
         int id;
 
-        Base(Type _type, Direction _direction, Status _status, double _requestQty) : 
-            type(_type), direction(_direction), status(_status), requestQty(_requestQty) {}
-        ~Base() {}
+        Base(Type _type, Direction _direction, double _requestQty, std::string _symbol) 
+        : type(_type), direction(_direction), status(INIT), requestQty(_requestQty), symbol(_symbol) {}
+        virtual ~Base() {}
 
         // Do not allow copying or moving
         Base(Base& base)            = delete;
@@ -56,6 +55,8 @@ class Base {
         virtual bool addOrder(Direction, int)         = 0;
         virtual bool modifyOrder(Direction, int, int) = 0;
         
+        bool deleteOrder(int);
+
         // Getters
         Type& getType()           { return type; }
         Direction& getDirection() { return direction;} 
