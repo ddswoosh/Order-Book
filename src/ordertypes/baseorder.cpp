@@ -1,5 +1,6 @@
 // Header Includes
 #include "baseorder.h"
+#include "../middleware/cachereader.h"
 
 // Standard Includes
 #include <chrono>
@@ -48,7 +49,7 @@ void Base::setPnl() {
 }
 
 void Base::setSymbolPrice() {
-    // Get data from python api
+    
 }
 
 bool Base::deleteOrder(int id) {
