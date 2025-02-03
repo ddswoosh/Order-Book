@@ -34,7 +34,7 @@ class SocketHandler:
     def __init__(self):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    # Send udp packets over local hold for QT to read
+    # Send udp packets over local host for QT to read
     def sendData(self, symbol):
         cache = CacheHandler()
         self.sock.sendto(cache.read(symbol).encode("utf-8"), ("127.0.0.1", 5000))
