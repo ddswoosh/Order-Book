@@ -2,8 +2,8 @@
 #define MARKETORDER_H
 
 // Header Inlcudes
-#include "../../appdefines.h"
-#include "../baseorder.h"
+#include "appdefines.h"
+#include "baseorder.h"
 
 // Standard Includes
 #include <string>

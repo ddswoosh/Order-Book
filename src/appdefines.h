@@ -5,7 +5,7 @@
 // #include        "../lib/sqlite/sqlite3.c"
 
 // Database connection settings
-#define DB1     "database/orders.db"
+#define DB1 "orders.db"
 
 // Order parameters
 enum Direction {

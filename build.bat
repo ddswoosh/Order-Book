@@ -10,4 +10,3 @@ cmake -B build -G "MinGW Makefiles" ^
 cd build
 start /wait mingw32-make.exe
 move ORDER_BOOK_0.0.1.exe ../ORDER_BOOK_0.0.1.exe
-start ../ORDER_BOOK_0.0.1.exe

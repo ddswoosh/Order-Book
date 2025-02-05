@@ -1,3 +1,6 @@
+#ifndef CACHEREADER_H
+#define CACHEREADER_H
+
 // Standard Includes
 #include <thread>
 // #include <winsock2.h>
@@ -28,3 +31,5 @@ class SocketHandler {
            char* readSocket();
 
 };
+
+#endif

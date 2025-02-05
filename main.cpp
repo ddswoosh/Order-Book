@@ -1,10 +1,12 @@
 // Header Inlcudes
 #include "appdefines.h"
 #include "cachereader.h"
+#include "applicationobject.h"
 
 // QT Includes
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 #include <iostream>
 int main(int argc, char** argv) {
@@ -21,13 +23,10 @@ int main(int argc, char** argv) {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("applicationobject", &ApplicationObject::getInstance());
+
     const QUrl url(QStringLiteral("main.qml"));
     engine.load(url);
-    if (engine.rootObjects().isEmpty()) {
-        qDebug() << "Failed to load QML file!";
-        return -1;
-    }
-
-    qDebug() << "QML file loaded successfully.";
+    
     return app.exec();
 }

@@ -20,6 +20,9 @@ find_package(Qt5 REQUIRED COMPONENTS Quick Core Gui Qml)
 add_executable(
     ${PROJECT_NAME}_${PROJECT_VERSION} 
     main.cpp
+
+    # Needed for MOC to parse QObject classes
+    ${INCLUDE_DIR}/applicationobject/applicationobject.cpp
 )
 
 target_link_libraries(
@@ -37,5 +40,6 @@ target_include_directories(
     ${INCLUDE_DIR}/ordertypes/limit
     ${INCLUDE_DIR}/ordertypes/market
     ${INCLUDE_DIR}/ordertypes/stop
+    ${INCLUDE_DIR}/applicationobject
 )
 
